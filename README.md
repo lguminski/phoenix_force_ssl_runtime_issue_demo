@@ -1,6 +1,6 @@
 # HelloWorld
 
-Project demonstrating a problem applying `:force_ssl` configuration with releases. Note that
+Project demonstrating a problem applying `:force_ssl` if runtime configuration is used (via Elixir releases). Note that
 
   * `config/prod.exs` does not define `:https` nor `:force_ssl` config
   * `config/releases.exs` defines them both
@@ -11,12 +11,14 @@ Project demonstrating a problem applying `:force_ssl` configuration with release
            certfile: "priv/cert/selfsigned.pem",
            keyfile: "priv/cert/selfsigned_key.pem"
          ],
-         force_ssl: [hsts: true, host: nil, log: :debug, exclude: []]
+         force_ssl: [hsts: true, host: "localhost:4001", log: :debug, exclude: []]
+
+(normally `host: nil` would be fully sufficient, but here a non-standard port 4001 is used, so `host: "localhost:4001"` had to be provided)
 
 ## Building
 
   * Install dependencies with `mix deps.get`
-  * Generate certificates `mix phx.gen.cert` (if t`mix archive.install hex phx_new 1.4.16`
+  * Generate certificates `mix phx.gen.cert` (if the `phx.gen.cert` target is missing, install it with `mix archive.install hex phx_new 1.4.16`)
   * Compresses static files `phx.digest`
   * Release `SECRET_KEY_BASE=$(mix phx.gen.secret) MIX_ENV=prod mix release`
 
