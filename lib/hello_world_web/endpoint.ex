@@ -43,5 +43,6 @@ defmodule HelloWorldWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+  plug Plug.SSL
   plug HelloWorldWeb.Router
 end

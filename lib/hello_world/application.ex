@@ -4,8 +4,10 @@ defmodule HelloWorld.Application do
   @moduledoc false
 
   use Application
+  import Logger
 
   def start(_type, _args) do
+    Logger.info "Starting..."
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
@@ -17,7 +19,9 @@ defmodule HelloWorld.Application do
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: HelloWorld.Supervisor]
-    Supervisor.start_link(children, opts)
+    res = Supervisor.start_link(children, opts)
+    Logger.info "Started"
+    res
   end
 
   # Tell Phoenix to update the endpoint configuration
