@@ -19,7 +19,7 @@ Project demonstrating a problem applying `:force_ssl` if runtime configuration i
 
   * Install dependencies with `mix deps.get`
   * Generate certificates `mix phx.gen.cert` (if the `phx.gen.cert` target is missing, install it with `mix archive.install hex phx_new 1.4.16`)
-  * Compresses static files `phx.digest`
+  * Compresses static files `mix phx.digest`
   * Release `SECRET_KEY_BASE=$(mix phx.gen.secret) MIX_ENV=prod mix release`
 
 ## Testing the issue
