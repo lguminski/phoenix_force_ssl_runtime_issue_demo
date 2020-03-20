@@ -1,6 +1,8 @@
 # HelloWorld
 
-Project demonstrating a problem applying `:force_ssl` if runtime configuration is used (via Elixir releases). Note that
+Project demonstrating a problem applying `:force_ssl` if runtime configuration is used (via Elixir releases).
+
+Note that:
 
   * `config/prod.exs` does not define `:https` nor `:force_ssl` config
   * `config/releases.exs` defines them both
