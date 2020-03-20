@@ -1,6 +1,6 @@
 # Phoenix project with runtime configuration (releases)
 
-Project demonstrating a problem applying `:force_ssl` if runtime configuration is used (via Elixir releases).
+Project demonstrating a problem applying `:force_ssl` if runtime configuration is used (via Elixir releases) (Phoenix [issue](https://github.com/phoenixframework/phoenix/issues/3714))
 
 Note that:
 
