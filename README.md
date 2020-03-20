@@ -37,16 +37,16 @@ Note that:
 
 ## Testing the issue
 
-  * Start Phoenix endpoint with:
-
-        $ _build/prod/rel/hello_world/bin/hello_world start
-
   * Display routes
 
         $ mix phx.routes
 
         page_path  GET  /                                      HelloWorldWeb.PageController :index
         websocket  WS   /socket/websocket                      HelloWorldWeb.UserSocket
+
+  * Start Phoenix endpoint with:
+
+        $ _build/prod/rel/hello_world/bin/hello_world start
 
   * Connect `/socket/websocket` route with curl and the server will respond with 301 redirect
 
