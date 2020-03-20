@@ -1,4 +1,4 @@
-# HelloWorld
+# Phoenix project with runtime configuration (releases)
 
 Project demonstrating a problem applying `:force_ssl` if runtime configuration is used (via Elixir releases).
 
