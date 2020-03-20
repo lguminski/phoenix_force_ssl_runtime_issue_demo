@@ -18,18 +18,25 @@ Project demonstrating a problem applying `:force_ssl` if runtime configuration i
 ## Building
 
   * Install dependencies
+
 				```bash
         $ mix deps.get
         ```
+
   * Generate certificates `mix phx.gen.cert` (if the `phx.gen.cert` target is missing, install it with `mix archive.install hex phx_new 1.4.16`)
+
 				```bash
         $ mix phx.gen.cert # if the `phx.gen.cert` target is missing, install it with `mix archive.install hex phx_new 1.4.16`
         ```
+
   * Compresses static files
+
 				```bash
         $ mix phx.digest
         ```
+
   * Release
+
 				```bash
         $ SECRET_KEY_BASE=$(mix phx.gen.secret) MIX_ENV=prod mix release
 				```
@@ -37,6 +44,7 @@ Project demonstrating a problem applying `:force_ssl` if runtime configuration i
 ## Testing the issue
 
   * Start Phoenix endpoint with:
+
 				```bash
         $ _build/prod/rel/hello_world/bin/hello_world start
 				```
