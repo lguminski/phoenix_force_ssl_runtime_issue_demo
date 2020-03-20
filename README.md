@@ -21,11 +21,11 @@ Project demonstrating a problem applying `:force_ssl` if runtime configuration i
 
         $ mix deps.get
 
-  * Generate certificates `mix phx.gen.cert` (if the `phx.gen.cert` target is missing, install it with `mix archive.install hex phx_new 1.4.16`)
+  * Generate certificates (if the `phx.gen.cert` target is missing, install it with `mix archive.install hex phx_new 1.4.16`)
 
-        $ mix phx.gen.cert # if the `phx.gen.cert` target is missing, install it with `mix archive.install hex phx_new 1.4.16`
+        $ mix phx.gen.cert
 
-  * Compresses static files
+  * Compress static files
 
         $ mix phx.digest
 
