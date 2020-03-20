@@ -19,9 +19,9 @@ Project demonstrating a problem applying `:force_ssl` if runtime configuration i
 
   * Install dependencies
 
-				```bash
-        $ mix deps.get
-        ```
+```bash
+$ mix deps.get
+```
 
   * Generate certificates `mix phx.gen.cert` (if the `phx.gen.cert` target is missing, install it with `mix archive.install hex phx_new 1.4.16`)
 
